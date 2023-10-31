@@ -17,6 +17,9 @@
 		3A9811BD2848950200DEAC32 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9811BB2848950200DEAC32 /* UIColor+Extension.swift */; };
 		3A9811BE2848950200DEAC32 /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9811BC2848950200DEAC32 /* Storyboardable.swift */; };
 		3A9811CC2849A14C00DEAC32 /* SearchCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9811C62849A14C00DEAC32 /* SearchCityViewModel.swift */; };
+		3A9811E92849F3A900DEAC32 /* SearchCityCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9811E82849F3A900DEAC32 /* SearchCityCoordinator.swift */; };
+		3A9811EB2849FB0100DEAC32 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9811EA2849FB0100DEAC32 /* BaseCoordinator.swift */; };
+		3A9811ED2849FB1800DEAC32 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9811EC2849FB1800DEAC32 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		3A9811BB2848950200DEAC32 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		3A9811BC2848950200DEAC32 /* Storyboardable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 		3A9811C62849A14C00DEAC32 /* SearchCityViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCityViewModel.swift; sourceTree = "<group>"; };
+		3A9811E82849F3A900DEAC32 /* SearchCityCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCityCoordinator.swift; sourceTree = "<group>"; };
+		3A9811EA2849FB0100DEAC32 /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		3A9811EC2849FB1800DEAC32 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BD8A1E2E948DCFDF0693A349 /* Pods_CityAirportSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityAirportSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2D106481CCB728F826FBC5 /* Pods-CityAirportSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityAirportSearch.debug.xcconfig"; path = "Target Support Files/Pods-CityAirportSearch/Pods-CityAirportSearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +83,7 @@
 		3A9811A32847510700DEAC32 /* CityAirportSearch */ = {
 			isa = PBXGroup;
 			children = (
+				3A9811E72849F39D00DEAC32 /* Coordinator */,
 				3A9811BF2849A14C00DEAC32 /* ViewModel */,
 				3A9811BA2848950200DEAC32 /* Shared */,
 				3A9811A42847510700DEAC32 /* AppDelegate.swift */,
@@ -105,6 +112,16 @@
 				3A9811C62849A14C00DEAC32 /* SearchCityViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3A9811E72849F39D00DEAC32 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				3A9811EC2849FB1800DEAC32 /* Coordinator.swift */,
+				3A9811EA2849FB0100DEAC32 /* BaseCoordinator.swift */,
+				3A9811E82849F3A900DEAC32 /* SearchCityCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		8E6BF27589520A3D8F0A0FE5 /* Pods */ = {
@@ -231,12 +248,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A9811E92849F3A900DEAC32 /* SearchCityCoordinator.swift in Sources */,
 				3A9811A92847510700DEAC32 /* SearchCityViewController.swift in Sources */,
 				3A9811A52847510700DEAC32 /* AppDelegate.swift in Sources */,
 				3A9811A72847510700DEAC32 /* SceneDelegate.swift in Sources */,
 				3A9811CC2849A14C00DEAC32 /* SearchCityViewModel.swift in Sources */,
 				3A9811BE2848950200DEAC32 /* Storyboardable.swift in Sources */,
 				3A9811BD2848950200DEAC32 /* UIColor+Extension.swift in Sources */,
+				3A9811EB2849FB0100DEAC32 /* BaseCoordinator.swift in Sources */,
+				3A9811ED2849FB1800DEAC32 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +409,6 @@
 				INFOPLIST_FILE = CityAirportSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -418,7 +437,6 @@
 				INFOPLIST_FILE = CityAirportSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
